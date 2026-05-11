@@ -15,6 +15,17 @@ void findMaxVal(int[], int[][NUM_COLS], int, int);
 
 void findMaxSum(int result[], int num[][NUM_COLS], int rows, int cols)
 {
+    int maxsum, maxrow;
+    for (int i=0; i < NUM_ROWS; i++){
+        int total = 0; 
+        for (int j=0; j < NUM_COLS; j++){
+            total += num[i][j];
+            if ((i == 0) || maxsum < total){
+            maxsum = total; maxrow = i;
+            }
+        }
+    }
+    cout << "The row whose sum is the largest is " << maxrow << endl;
     // TODO: find the row whose sum is the largest, copy that row into result.
 }
 
